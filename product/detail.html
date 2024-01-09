@@ -2,16 +2,25 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>SHT Online Store Official</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detail - Hiking Store</title>
     <meta
       name="description"
-      content="Experience the seamless shopping experience with static e-commerce websites crafted with the power of JavaScript, offering modern and interactive online stores for your convenience."
+      content="Everything you need for your next Mountain Adventure is available online. Hikstore offers a wide selection of Clothing, Shoes, Technical Hardware & Avalanche Safety Equipment."
     />
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="Detail - Hiking Store" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://hikstore.pages.dev/product/detail/"
+    />
+    <meta property="og:image" content="/doc/preview.png" />
     <meta property="og:locale" content="en" />
-    
-    
+    <link rel="canonical" href="https://hikstore.pages.dev/product/detail/" />
+    <meta name="theme-color" content="#f4f4f5" />
+    <meta name="msapplication-TileColor" content="#f4f4f5" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
 
     <link
       rel="apple-touch-icon"
@@ -30,12 +39,12 @@
       sizes="16x16"
       href="/img/icons/favicon-16x16.png"
     />
+    <link rel="manifest" href="site.webmanifest" />
     <link
       rel="mask-icon"
       href="/img/icons/safari-pinned-tab.svg"
       color="#ffcb37"
     />
-    <link rel="manifest" href="site.webmanifest" />
     <link rel="shortcut icon" href="/img/icons/favicon.ico" />
 
     <link rel="stylesheet" href="/css/main.css" />
@@ -43,7 +52,13 @@
     <link rel="stylesheet" href="/fontawesome/css/regular.css" />
     <link rel="stylesheet" href="/fontawesome/css/brands.css" />
     <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="/product/style.css" />
     <link rel="stylesheet" href="/css/utilities.css" />
+
+    <script type="module" defer>
+      const params = new URLSearchParams(window.location.search);
+      const id = params?.get("id") ?? 0;
+    </script>
 
     <script type="module" defer src="/js/main.js"></script>
   </head>
@@ -100,13 +115,11 @@
               >
             </button>
             <button
-              aria-label="User Profile"
               class="user-profile logout text-xl flex-row items-center border-l px-5 py-2 h-full"
             >
               <i class="fa-regular fa-user"></i>
             </button>
             <button
-              aria-label="Menu Button"
               class="btn-menu flex-row items-center gap-2 hidden sm-flex border-l px-5 py-2 h-full"
             >
               <span class="menu-icon">
@@ -190,13 +203,13 @@
           action=""
           class="border flex-row gap-2 bg-gray rounded px-4 py-2 hidden sm-flex"
         >
-          <label for="search-side">
+          <label for="search">
             <i class="fa-regular fa-magnifying-glass"></i>
           </label>
           <input
             type="search"
             name="search"
-            id="search-side"
+            id="search"
             placeholder="Search here..."
           />
         </form>
@@ -250,139 +263,129 @@
 
     <!-- Content Start -->
     <main>
-      <section class="h-screen relative">
-        <div class="absolute inset-0 top-auto h-20 bg-black"></div>
-        <div class="h-full grid grid-cols-2 sm-grid-cols-none container">
-          <div class="flex-col justify-center gap-4">
-            <h1 class="text-6xl w-4/5 sm-text-4xl leading-tight mb-2">
-              Your Adventure Starts Here
-            </h1>
-            <p class="w-4/5 sm-w-full">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque ut
-              ducimus adipisci ex perferendis vitae doloremque nam magnam porro,
-              repellendus consequuntur.
-            </p>
-            <a
-              href="/product/index.html"
-              class="border-2 w-max border-primary rounded px-5 py-3 flex-row items-center gap-4"
+      <section class="min-h-screen">
+        <div class="container grid grid-cols-3 sm-grid-cols-1 h-full mb-20">
+          <div class="h-full flex-col justify-between w-full">
+            <div
+              class="flex-row justify-center relative h-[calc(100vh-7.5rem)] sm-h-max w-full bg-gray"
             >
-              <span class="font-medium text-lg">Explore Now</span>
-              <span class="text-xl text-primary">
-                <i class="fa-solid fa-arrow-right-long"></i>
-              </span>
-            </a>
-            <div class="h-20 sm-hidden"></div>
+              <img
+                src="https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1013-02170-00189_main-grey_191734.jpg"
+                class="h-full w-full object-cover product-preview"
+                alt="Product"
+              />
+              <button
+                class="btn-wish text-xl"
+                aria-label="Add Wishlist"
+                style="right: 1.5rem"
+              ></button>
+            </div>
+            <div class="h-30 flex-row items-center justify-center py-4 gap-4">
+              <button class="h-full bg-gray">
+                <img
+                  src="https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1013-02170-00189_main-grey_191734.jpg"
+                  class="h-full w-full object-cover thumbnail-item border-black border-2"
+                  alt="Product"
+                />
+              </button>
+              <button class="h-full bg-gray">
+                <img
+                  src="https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1013-02170-00189_mod-main-hf-png_210279.png"
+                  class="h-full w-full object-cover thumbnail-item border-black"
+                  alt="Product"
+                />
+              </button>
+              <button class="h-full bg-gray">
+                <img
+                  src="https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1013-02170-00189_mod-side-hf-grey_210280.jpg"
+                  class="h-full w-full object-cover thumbnail-item border-black"
+                  alt="Product"
+                />
+              </button>
+              <button class="h-full bg-gray">
+                <img
+                  src="https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1013-02170-00189_main-grey_191734.jpg"
+                  class="h-full w-full object-cover thumbnail-item border-black"
+                  alt="Product"
+                />
+              </button>
+            </div>
           </div>
-          <div class="relative flex-col justify-center items-center">
-            <img
-              src="/img/hero.jpg"
-              class="w-full h-full object-cover"
-              draggable="false"
-              alt="Hero Image"
-            />
-            <div class="absolute inset-0 top-auto px-8 py-6">
-              <div class="flex-row gap-4 items-center text-white text-2xl">
-                <i class="fa-regular fa-location-dot"></i>
-                <span class="text-lg"> Alpe Devero, VB, Italia</span>
+          <div class="h-full col-span-2 flex-col pb-10">
+            <div class="w-4/5 sm-w-full mx-auto flex-col gap-4 mt-4">
+              <div
+                class="flex-row gap-6 py-4 mb-6 border-b-2 text-lg sm-text-md w-full"
+                style="overflow-x: hidden"
+              >
+                <div class="flex-row gap-6" style="overflow-x: auto">
+                  <span class="whitespace-nowrap opacity-100">
+                    Size and Color
+                  </span>
+                  <span class="opacity-60">Review</span>
+                  <span class="whitespace-nowrap opacity-60"> Discussion </span>
+                </div>
+              </div>
+              <h1 class="text-4xl" style="white-space: normal">
+                Rime Light IN Flex Vest Men
+              </h1>
+              <p>
+                Ideal as a thermal layer when using the layering principle, to
+                keep the core of your body warm. The extremely light Rime Light
+                Vest fits snugly to the body thanks to its stretch insulation
+                and side inserts made from elastic Polartec® Power Grid™ fleece.
+              </p>
+              <span class="text-xl">IDR 2.506.000</span>
+              <div class="flex-row gap-10">
+                <div class="flex-col gap-2">
+                  <span class="text-md">Size Available</span>
+                  <div class="flex-row gap-4">
+                    <button class="bg-gray text-sm py-2 px-4">S</button>
+                    <button class="bg-gray text-sm py-2 px-4">M</button>
+                    <button class="bg-gray text-sm py-2 px-4">L</button>
+                    <button class="bg-gray text-sm py-2 px-4">XL</button>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-col gap-2 sidear-wrap-3" style="margin-top: 0">
+                <span class="text-md">Colors</span>
+                <div class="wrap-option-color m-0">
+                  <ul style="margin: 0"></ul>
+                </div>
+              </div>
+              <div class="flex-row gap-4 mt-4">
+                <button
+                  class="border-2 border-black text-white bg-black rounded px-5 py-3 w-full w-max"
+                >
+                  <span class="font-medium text-lg sm-text-md"
+                    >Add to Cart</span
+                  >
+                </button>
+                <button
+                  class="border-2 w-max border-primary rounded px-5 py-3 flex-row items-center gap-4"
+                >
+                  <span class="font-medium text-lg sm-text-md"
+                    >Next Detail</span
+                  >
+                  <span class="text-xl">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </span>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="h-max py-20 relative bg-black">
-        <div class="h-full container flex-col gap-6 justify-center">
-          <div class="grid grid-cols-2 sm-grid-cols-none gap-10">
-            <div class="flex-col gap-2 justify-center">
-              <h2 class="text-primary text-4xl leading-tight font-medium">
-                Trusted by over 100,000+ Clients worldwide since 2005
-              </h2>
-            </div>
-            <div class="grid grid-cols-4 sm-grid-cols-2 gap-6">
-              <div class="flex-col items-center justify-center px-2 py-6">
-                <img
-                  src="/img/partner/airbnb.svg"
-                  style="filter: grayscale(1)"
-                  alt="AirBNB"
-                />
-              </div>
-              <div class="flex-col items-center justify-center px-2 py-6">
-                <img
-                  src="/img/partner/google.svg"
-                  style="filter: grayscale(1)"
-                  alt="Google"
-                />
-              </div>
-              <div class="flex-col items-center justify-center px-2 py-6">
-                <img src="/img/partner/instagram.svg" alt="Instagram" />
-              </div>
-              <div class="flex-col items-center justify-center px-2 py-6">
-                <img src="/img/partner/ayura.svg" alt="Ayura" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="h-max py-20 relative">
+      <section class="h-max py-10 relative">
         <div class="h-full container flex-col gap-10 justify-center">
-          <div class="flex-row sm-flex-col justify-between items-center gap-4">
-            <h2 class="text-4xl leading-tight text-center">
-              New Launch This Month
+          <div class="flex-row sm-flex-col justify-center items-center gap-4">
+            <h2 class="text-3xl leading-tight text-center">
+              You may also like
             </h2>
-            <a
-              href="/product/index.html"
-              class="border-2 w-max border-primary rounded px-5 py-3 flex-row items-center gap-4"
-            >
-              <span class="font-medium">Shop Now</span>
-            </a>
           </div>
           <div
             class="grid grid-cols-4 sm-grid-cols-none gap-6"
-            id="products"
+            id="recommend"
           ></div>
-        </div>
-      </section>
-      <section class="min-h-screen h-max relative pb-10">
-        <div class="h-full container flex-col gap-10 justify-center">
-          <div class="grid grid-rows-2 sm-grid-rows-none gap-6 h-full">
-            <div class="grid grid-cols-3 sm-grid-cols-none gap-6">
-              <a
-                href="/product/index.html"
-                class="flex-col justify-end rounded-xl sm-aspect-square p-8 bg-clothing"
-              >
-                <span class="text-white text-3xl font-medium">Clothing</span>
-              </a>
-              <a
-                href="/product/index.html"
-                class="flex-col justify-end rounded-xl sm-aspect-square p-8 bg-footwear"
-              >
-                <span class="text-white text-3xl font-medium">Footwear</span>
-              </a>
-              <a
-                href="/product/index.html"
-                class="flex-col justify-end rounded-xl sm-aspect-square p-8 bg-equipment"
-              >
-                <span class="text-white text-3xl font-medium">Equipment</span>
-              </a>
-            </div>
-            <div
-              class="flex-col justify-center items-center gap-6 rounded-xl p-8 py-16 bg-black"
-            >
-              <h3
-                class="text-primary text-5xl sm-text-3xl leading-tight w-1/2 text-center sm-w-full"
-              >
-                What do you need for the next adventure?
-              </h3>
-              <a
-                href="/product/index.html"
-                class="border-2 w-max border-white bg-white rounded px-4 py-2 flex-row items-center gap-4"
-              >
-                <span class="text-md">See Our Product</span>
-                <span class="text-xl">
-                  <i class="fa-solid fa-arrow-right-long"></i>
-                </span>
-              </a>
-            </div>
-          </div>
         </div>
       </section>
     </main>
@@ -407,11 +410,12 @@
               online.
             </p>
             <div class="flex-row gap-4">
-              <a
-                href="#"
-                class="h-10 w-10 bg-facebook text-white rounded-full flex-row justify-center items-center h-full text-xl"
-              >
-                <i class="fa-brands fa-facebook-f"></i>
+              <a href="#" class="h-10 w-10 bg-facebook text-white rounded-full">
+                <span
+                  class="flex-row justify-center items-center h-full text-xl"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </span>
               </a>
               <a
                 href="#"
@@ -433,8 +437,8 @@
             </div>
           </div>
           <div class="flex-col gap-2">
-            <h3 class="text-xl mb-2">Support</h3>
-            <a href="#" class="hover-underline">Help &#38; FAQ</a>
+            <h4 class="text-xl mb-2">Support</h4>
+            <a href="#" class="hover-underline">Help & FAQ</a>
             <a href="#" class="hover-underline">Term of Service</a>
             <a href="#" class="hover-underline">Privacy Policy</a>
           </div>
@@ -467,6 +471,37 @@
       </div>
     </footer>
     <!-- Footer End -->
+    <script>
+      const wrapOptionColor = document.querySelector(".wrap-option-color ul");
+      for (let i = 0; i < 3; i++) {
+        wrapOptionColor.insertAdjacentHTML(
+          "beforeend",
+          `<li>
+            <label
+              class="option-color"
+              style="background-color: #${Math.floor(
+                Math.random() * 16777215
+              ).toString(16)}"
+            >
+              <input type="checkbox" style="opacity: 0" name="color" />
+            </label>
+          </li>`
+        );
+      }
+      document.addEventListener("click", function (event) {
+        const { target } = event;
+        if (target.classList.contains("thumbnail-item")) {
+          const img = document.querySelector(".product-preview");
+          const newSrc = target.src;
+          document.querySelectorAll(".thumbnail-item").forEach((item) => {
+            item.classList.remove("border-2");
+          });
+          target.classList.add("border-2");
+          img.setAttribute("src", newSrc);
+          img.setAttribute("srcSet", newSrc);
+        }
+      });
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script
